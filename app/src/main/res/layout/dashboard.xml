@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutDashBoard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutDash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bktrigopao"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            tools:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+id/textViewDescricao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:autoSizeMinTextSize="@android:dimen/app_icon_size"
+            android:fontFamily="serif"
+            android:paddingLeft="10dp"
+            android:paddingTop="50dp"
+            android:text="Descrição dos Produtos"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/textViewQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="serif"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="10dp"
+            android:paddingStart="20dp"
+            android:paddingTop="50dp"
+            android:text="Quantidade"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewVermelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewDescricao"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="#F03434"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_vermelho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-50dp" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewAmarelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewVermelho"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="#f39c12"
+            app:cardCornerRadius="11dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_amarelo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerview_vermelho"
+                android:layout_marginBottom="-50dp" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewCinza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardViewAmarelo"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            app:cardBackgroundColor="#f1c40f"
+            app:cardCornerRadius="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_cinza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerview_amarelo"
+                android:layout_margin="-50dp">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
